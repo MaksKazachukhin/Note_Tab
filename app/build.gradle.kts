@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.note_tab"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.note_tab"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 355
         versionCode = 1
         versionName = "1.0"
 
@@ -30,11 +30,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding = true
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
 }
-
+val nav_version = "2.8.4"
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -45,4 +48,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui)
+
 }
