@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,50 +9,41 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></androidx.viewpager2.widget.ViewPager2>
+        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/text11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:paddingTop="50dp"
-        android:paddingEnd="20sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
         android:text="Пропустить"
         android:textColor="@color/orange"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="bottom|center"
-        android:background="@drawable/krug" />
 
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/krug" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="150dp"
-        android:contentDescription="Illustration"
-        android:scaleType="centerCrop" />
-
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnstart"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:background="@drawable/rectangle"
-        android:padding="12dp"
-        android:text="Начать"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp"/>
+        android:backgroundTint="@color/orange"
+        android:layout_marginTop="300dp"
+        android:padding="12dp"
+        android:text="Начать" />
 
-
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="#252525"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="30dp" />
 
 </FrameLayout>

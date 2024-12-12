@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.example.note_tab.R
 import com.example.note_tab.databinding.FragmentOnBoardBinding
 import com.example.note_tab.ui.adapters.OnBoardViewPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class OnBoardFragment : Fragment() {
@@ -24,6 +27,12 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setupListeners()
+        tabLayout()
+    }
+
+    private fun tabLayout() {
+        TabLayoutMediator(binding.tabLayout, binding.viewPager2) { _, _ ->
+        }.attach()
     }
 
     private fun initialize() {
@@ -40,10 +49,12 @@ class OnBoardFragment : Fragment() {
                     binding.text11.visibility = View.VISIBLE
                     binding.text11.setOnClickListener {
                         setCurrentItem(currentItem + 2, true)
-
                     }
                 }
             }
         })
+        binding.btnstart.setOnClickListener {
+            findNavController().navigate(R.id.regFragment)
+        }
     }
 }

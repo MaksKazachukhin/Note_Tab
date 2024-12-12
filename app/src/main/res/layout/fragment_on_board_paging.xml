@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Fragment.OnBoardPagingFragment"
-    android:background="#252525"
-
-    >
+    android:background="#252525">
 
     <TextView
         android:id="@+id/tv_head"
@@ -16,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="28sp"
+        android:layout_marginBottom="50dp"
         android:text="Удобство"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -32,4 +30,14 @@
         android:text="Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно."
         android:textColor="@color/white"
         />
-</LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="90dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lotti1" />
+</FrameLayout>
