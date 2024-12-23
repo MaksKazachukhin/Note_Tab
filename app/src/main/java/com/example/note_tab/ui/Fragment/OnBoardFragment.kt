@@ -56,5 +56,12 @@ class OnBoardFragment : Fragment() {
         binding.btnstart.setOnClickListener {
             findNavController().navigate(R.id.regFragment)
         }
+        binding.btnstart.setOnClickListener {
+            if (!sharedPref.isFirstTime) {
+                val action = OnBoardFragmentDirections.actionOnBoardFragmentToNoteFragment()
+                findNavController().navigate(action)
+                sharedPref.isFirstTime = true
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
 }
 
 android {
@@ -10,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.example.note_tab"
         minSdk = 28
-        targetSdk = 355
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -35,12 +36,15 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+
+
     }
+
 }
 val nav_version = "2.8.4"
 dependencies {
-    implementation (libs.lottie)
 
+    implementation(libs.lottie)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -52,6 +56,11 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui)
     implementation(libs.dotsindicator)
+    implementation(libs.google.ksp)
+
+
+    val room_version = "2.6.1"
+    implementation(libs.androidx.room.ktx)
 
 
 }
