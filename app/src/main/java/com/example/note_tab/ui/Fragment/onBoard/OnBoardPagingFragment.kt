@@ -1,4 +1,4 @@
-package com.example.note_tab.ui.Fragment
+package com.example.note_tab.ui.Fragment.onBoard
 
 import android.annotation.SuppressLint
 import android.os.Bundle

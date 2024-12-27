@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#252525"
-    tools:context=".ui.Fragment.OnBoardFragment">
+    tools:context=".ui.Fragment.onBoard.OnBoardFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
@@ -12,7 +12,7 @@
         android:layout_height="match_parent" />
 
     <TextView
-        android:id="@+id/text11"
+        android:id="@+id/tv_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -25,7 +25,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnstart"
+        android:id="@+id/btn_start"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -35,16 +35,16 @@
         android:padding="12dp"
         android:text="Начать" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:dotsSize="12dp"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:background="#252525"
-        app:tabBackground="@drawable/tab_selector"
-        app:tabGravity="center"
-        app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="30dp" />
+        android:layout_marginTop="170dp"
+        app:dotsColor="@color/dots_gray"
+        app:selectedDotColor="@color/orange"
+        app:dotsSpacing="6dp"
+        app:dotsClickable="true" />
 
 </FrameLayout>
