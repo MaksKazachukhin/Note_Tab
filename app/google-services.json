@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1037057321491",
+    "project_id": "home-work5-dabe3",
+    "storage_bucket": "home-work5-dabe3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037057321491:android:94022031a66c0166dc6de6",
+        "android_client_info": {
+          "package_name": "com.example.note_tab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-d24pjQpdlhHABYiWWXbpRtAhmV-85dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
